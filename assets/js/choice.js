@@ -41,7 +41,7 @@ $(document).ready(function() {
                     $.when($('.row.choices').fadeOut()).then(function() {
                         $('.row.choices').html('');
                         $('.row.choices').append('<div class="column"></div><div class="eight wide column"></div><div class="column"></div>');
-                        $('.row.choices .eight.wide.column').append('<a class="ui huge yellow button spaced-top choice" href="/organize">Okay...</a>');
+                        $('.row.choices .eight.wide.column').append('<a class="ui huge yellow button spaced-top choice" href="/organize">Okay.</a>');
                         $('.row.choices').fadeIn();
                     });
                 }
