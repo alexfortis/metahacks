@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .ui.container.centered.vertical-center
+    .ui.huge.center.aligned.main.icon.inverted.header
+      i.massive.yellow.trophy.splash.icon
+      .splash.content Hackathon Simulator Leaderboard
+      .main.splash.sub.header The hackathon has ended. Congratulations to these organizers!
+  br
+  .ui.container.center.aligned
+    for scoreItem in scores
+      a.ui.big.white.button
+        i.thumbs.up.icon
+        span= scoreItem.score
+    a.ui.big.yellow.button(href='/')
+      i.left.arrow.icon
+      span New Game

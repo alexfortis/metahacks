@@ -46,6 +46,11 @@ var EventChanceSchema = new Schema({
     image: String
 });
 
+// Score Schema
+var ScoreSchema = new Schema({
+    score: Number
+});
+
 EventChanceSchema.statics.random = function(callback) {
   this.count(function(err, count) {
     if (err) {
@@ -58,6 +63,7 @@ EventChanceSchema.statics.random = function(callback) {
 
 var Event = mongoose.model('Event', EventChanceSchema, 'events');
 var Chance = mongoose.model('Chance', EventChanceSchema, 'chances');
+var Score = mongoose.model('Score', ScoreSchema, 'scores');
 
 // Path configuration
 const dir = path.resolve(__dirname, '..');
@@ -79,7 +85,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
 
 // Routes
-require('../routes/general')(app, Event, Chance);
+require('../routes/general')(app, Event, Chance, Score);
 
 // Port configuration
 const port = 3000;

@@ -6,19 +6,19 @@ block content
       .column
       .twelve.wide.column.spaced-top.center.aligned
         .ui.piled.segment
-          h2.ui.header.inline
+          h2.ui.header.inline(data-tooltip="Approval Rating", data-position="bottom center", data-inverted="")
             i.big.thumbs.outline.up.white.icon
             .content= state.stats.rating
-          h2.ui.header.inline
+          h2.ui.header.inline(data-tooltip="Number of Sponsors", data-position="bottom center", data-inverted="")
             i.big.building.outline.white.icon
             .content= state.stats.sponsors
-          h2.ui.header.inline
+          h2.ui.header.inline(data-tooltip="Budget", data-position="bottom center", data-inverted="")
             i.big.dollar.up.white.icon
             .content= state.stats.money
-          h2.ui.header.inline
+          h2.ui.header.inline(data-tooltip="Number of Hackers", data-position="bottom center", data-inverted="")
             i.big.user.outline.white.icon
             .content= state.stats.hackers
-          h2.ui.header.inline
+          h2.ui.header.inline.time(data-tooltip="Time Spent", data-position="bottom center", data-inverted="")
             i.big.clock.outline.white.icon
             .content= 'Hour ' + state.stats.time
       .column
@@ -65,7 +65,7 @@ block content
             a.ui.huge.yellow.button.spaced-top.choice(
               data-next=JSON.stringify(choice.next),
               data-effects=JSON.stringify(choice.effects),
-              data-chances=JSON.stringify(choice.chances)
+              data-chances=JSON.stringify(state.event_item.chances)
             )= choice.text
       .column
 

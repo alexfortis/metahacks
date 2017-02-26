@@ -1,7 +1,7 @@
 // --------- Dependencies ---------
 var path = require('path');
 
-module.exports = function(app, Event, Chance) {
+module.exports = function(app, Event, Chance, Score) {
 
   function getRandomKey(obj) {
       var temp_key, keys = [];
@@ -68,6 +68,7 @@ module.exports = function(app, Event, Chance) {
   });
 
   app.post('/organize', function(req, res) {
+    console.log(req.body);
     if (req.body.next_step === '') {
       if (req.body.chances === '') {
         if (req.body.effects === '') {
@@ -138,10 +139,25 @@ module.exports = function(app, Event, Chance) {
     }
   });
 
-  app.get('/newgame', function(req, res) {
-    req.session.destroy(function(err) {
-      return res.redirect('/');
-    })
+  app.get('/scores', function(req, res) {
+    if (req.session.game_state) {
+      var score = new Score({ score: req.session.game_state.stats.rating });
+      score.save(function(err, result) {
+        if (err) console.log(err);
+
+        console.log(result);
+
+        req.session.destroy(function(err) {
+          Score.find().sort({score: -1}).limit(10).exec(function(err, scores) {
+            return res.render('leaderboard', { scores: scores });
+          });
+        });
+      });
+    } else {
+      Score.find().sort({score: -1}).limit(10).exec(function(err, scores) {
+        return res.render('leaderboard', { scores: scores });
+      });
+    }
   });
 
 };

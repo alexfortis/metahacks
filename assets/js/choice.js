@@ -1,9 +1,6 @@
 var makeChoice;
 $(document).ready(function() {
     makeChoice = function(data) {
-        console.log(JSON.parse($(data)[0].attributes[1].value));
-        console.log(JSON.parse($(data)[0].attributes[2].value));
-        console.log(JSON.parse($(data)[0].attributes[3].value));
         $.ajax({
             type: "POST",
             url: "/organize",
@@ -14,7 +11,9 @@ $(document).ready(function() {
                 chances: JSON.parse($(data)[0].attributes[3].value)
             },
             success: function(result) {
-                if (result.refresh) {
+                if (parseInt($('h2.time .content').html().substr(5)) >= 72) {
+                    window.location.replace("/scores");
+                } else if (result.refresh) {
                     window.location.reload(true);
                 } else if (result.hasOwnProperty('choices')) {
                     $('.ui.image').attr('src', 'assets/img/' + result.image);
