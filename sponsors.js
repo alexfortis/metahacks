@@ -1,0 +1,1 @@
+sponsors = ["BAE", "Citi", "Viacom", "Vanguard", "HRT", "AIS", "Bloomberg", "Lockheed Martin", "GE", "PWC", "76West", "Rubenstein Technology Group"];
