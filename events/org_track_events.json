@@ -5,21 +5,21 @@
     "choices" : [
 	{
 	    "text" : "Accept",
-	    "effects" : [
-		{ "sponsors" : 1 },
-		{ "rating" : 10 },
-		{ "multiplier" : 0.05 },
-		{ "money" : 2000 },
-		{ "time" : 1 }
-	    ],
+	    "effects" : {
+		"sponsors" : 1,
+		"rating" : 10,
+		"multiplier" : 0.05,
+		"money" : 2000,
+		"time" : 1
+	    },
 	    "next" : null
 	},
 	{
 	    "text" : "Decline",
-	    "effects" : [
-		{ "rating" : -20 },
-		{ "time" : 1 }
-	    ],
+	    "effects" : {
+		"rating" : -20,
+		"time" : 1
+	    },
 	    "next" : null
 	},
 	{
@@ -35,6 +35,7 @@
     ],
     "chances" : null
 },
+
 {
     "type" : "SponsorMore",
     "image" : "placeholder.jpg",
@@ -44,35 +45,36 @@
 	{
 	    "threshold" : 5,
 	    "text" : "Okay, we'll give you the full amount.",
-	    "effects" : [
-		{ "sponsors" : 1 },
-		{ "rating" : 10 },
-		{ "multiplier", 0.05 },
-		{ "money" : 4000 },
-		{ "time" : 2 }
-	    ]
+	    "effects" : {
+		"sponsors" : 1,
+		"rating" : 10,
+		"multiplier", 0.05,
+		"money" : 4000,
+		"time" : 2
+	    }
 	},
 	{
 	    "threshold" : 10,
 	    "text" : "Let's meet half way.",
-	    "effects" : [
-		{ "sponsors" : 1 },
-		{ "rating" : 10 },
-		{ "multiplier", 0.05 },
-		{ "money" : 3000 },
-		{ "time" : 2 }
-	    ]
+	    "effects" : {
+		"sponsors" : 1,
+		"rating" : 10,
+		"multiplier", 0.05,
+		"money" : 3000,
+		"time" : 2
+	    }
 	},
 	{
 	    "threshold" : 100,
 	    "text" : "No.",
-	    "effects" : [
-		{ "rating" : -20 },
-		{ "time" : 2 }
-	    ]
+	    "effects" : {
+		"rating" : -20,
+		"time" : 2
+	    }
 	}
     ]
 },
+
 {
     "type" : "SponsorJob",
     "image" : "placeholder.jpg",
@@ -80,9 +82,9 @@
     "choices" : [
 	{
 	    "text" : "Yeah",
-	    "effects" : [
-		{ "url" : "www.google.com" }
-	    ],
+	    "effects" : {
+		"url" : "www.google.com"
+	    },
 	    "next" : null
 	},
 	{
@@ -93,146 +95,149 @@
     ],
     "chances" : null
 },
+
 {
-	"type":"Food breakfast",
-	"image":"food.jpg",
-	"message":"What will your hackers eat for breakfast?",
-	"choices": [
-		   {
-			"text":"IHOP",
-			"effects": [
-				   {"rating":10},
-				   {"time":1},
-				   {"breakfast":"IHOP"},
-				   {"money":10}
-			]
-			"next":null
-		    },
-		    {
-			"text":"Nezuntoz",
-			"effects": [
-				   {"rating":8},
-				   {"time":1},
-				   {"breakfast":"Nezuntoz"},
-				   {"money":5}
-			],
-			"next":null
-		    },
-		    {
-			"text":"Sodexo",
-			"effects": [
-				   {"rating":2},
-				   {"time":1},
-				   {"breakfast":"Sodexo"},
-				   {"money":3}
-			],
-			"next":null
-		    },
-		    {
-			"text":"Denny's",
-			"effects": [
-				   {"rating":7},
-				   {"time":1},
-				   {"breakfast":"Denny's"},
-				   {"money":5}
-			]
-		    }
-	],
-	"chances":null
+    "type":"Food breakfast",
+    "image":"food.jpg",
+    "message":"What will your hackers eat for breakfast?",
+    "choices": [
+	{
+	    "text":"IHOP",
+	    "effects": {
+		"rating":10,
+		"time":1,
+		"breakfast":"IHOP",
+		"money":10
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Nezuntoz",
+	    "effects": {
+		"rating":8,
+		"time":1,
+		"breakfast":"Nezuntoz",
+		"money":5
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Sodexo",
+	    "effects": {
+		"rating":2,
+		"time":1,
+		"breakfast":"Sodexo",
+		"money":3
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Denny's",
+	    "effects": {
+		"rating":7,
+		"time":1,
+		"breakfast":"Denny's",
+		"money":5
+	    }
+	}
+    ],
+    "chances":null
 },
+
 {
-	"type":"Food lunch",
-	"image":"food.jpg",
-	"message":"What will your hackers eat for lunch?",
-	"choices":[
-		{
-			"text":"Subway",
-			"effects": [
-				   {"rating":7},
-				   {"time":1},
-				   {"lunch":"Subway"},
-				   {"money":5}
-			],
-			"next":null
-		},
-		{
-			"text":"Wegman's",
-			"effects": [
-				   {"rating":10},
-				   {"time":1},
-				   {"lunch":"Wegman's"},
-				   {"money":8}
-			],
-			"next":null
-		},
-		{
-			"text":"Chick N Bap",
-			"effects": [
-				   {"rating":6},
-				   {"time":1},
-				   {"lunch":"Chick N Bap"},
-				   {"money":6}
-			],
-			"next":null
-		},
-		{
-			"text":"Nirchi's",
-			"effects": [
-				   {"rating":5},
-				   {"time":1},
-				   {"lunch":"Nirchi's"},
-				   {"money":3}
-			],
-			"next":null
-		}
-	],
-	"chances":null
+    "type":"Food lunch",
+    "image":"food.jpg",
+    "message":"What will your hackers eat for lunch?",
+    "choices":[
+	{
+	    "text":"Subway",
+	    "effects": {
+		"rating":7,
+		"time":1,
+		"lunch":"Subway",
+		"money":5
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Wegman's",
+	    "effects": {
+		"rating":10,
+		"time":1,
+		"lunch":"Wegman's",
+		"money":8
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Chick N Bap",
+	    "effects": {
+		"rating":6,
+		"time":1,
+		"lunch":"Chick N Bap",
+		"money":6
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Nirchi's",
+	    "effects": {
+		"rating":5,
+		"time":1,
+		"lunch":"Nirchi's",
+		"money":3
+	    },
+	    "next":null
+	}
+    ],
+    "chances":null
 },
+ 
 {
-	"type":"Food dinner",
-	"image":"food.jpg",
-	"message":"What will your hackers eat for dinner?",
-	"choices":[
-		{
-			"text":"Buffet Star",
-			"effects": [
-				   {"rating":5},
-				   {"time":1},
-				   {"dinner":"Buffet Star"},
-				   {"money":8}
-			],
-			"next":null
-		},
-		{
-			"text":"Moe's",
-			"effects": [
-				   {"rating":6},
-				   {"time":1},
-				   {"dinner":"Moe's",
-				   {"money":8}
-			],
-			"next":null
-		},
-		{
-			"text":"Tully's",
-			"effects": [
-				   {"rating":7},
-				   {"time":1},
-				   {"dinner":"Tully's"},
-				   {"money":8}
-			],
-			"next":null
-		},
-		{
-			"text":"Sodexo"
-			"effects": [
-				   {"rating":3"},
-				   {"time":1},
-				   {"dinner":"Sodexo"},
-				   {"money":5}
-			]
-		}
-	]
+    "type":"Food dinner",
+    "image":"food.jpg",
+    "message":"What will your hackers eat for dinner?",
+    "choices":[
+	{
+	    "text":"Buffet Star",
+	    "effects": {
+		"rating":5,
+		"time":1,
+		"dinner":"Buffet Star",
+		"money":8
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Moe's",
+	    "effects": {
+		"rating":6,
+		"time":1,
+		"dinner":"Moe's",
+		"money":8
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Tully's",
+	    "effects": {
+		"rating":7,
+		"time":1,
+		"dinner":"Tully's",
+		"money":8
+	    },
+	    "next":null
+	},
+	{
+	    "text":"Sodexo",
+	    "effects": {
+		"rating": 3,
+		"time":1,
+		"dinner":"Sodexo",
+		"money":5
+	    }
+	}
+    ]
 }
 
 ]
