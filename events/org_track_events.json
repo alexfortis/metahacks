@@ -1,0 +1,95 @@
+[{
+    "type" : "Sponsor",
+    "image" : "placeholder.jpg",
+    "message" : "A sponsor approaches.",
+    "choices" : [
+	{
+	    "text" : "Accept",
+	    "effects" : [
+		{ "sponsors" : 1 },
+		{ "rating" : 10 },
+		{ "multiplier" : 0.05 },
+		{ "money" : 2000 },
+		{ "time" : 1 }
+	    ],
+	    "next" : null
+	},
+	{
+	    "text" : "Decline",
+	    "effects" : [
+		{ "rating" : -20 },
+		{ "time" : 1 }
+	    ],
+	    "next" : null
+	},
+	{
+	    "text" : "Ask for more",
+	    "effects" : null,
+	    "next" : "SponsorMore"
+	},
+	{
+	    "text" : "Ask for job",
+	    "effects" : null,
+	    "next" : "SponsorJob"
+	}
+    ],
+    "chances" : null
+},
+{
+    "type" : "SponsorMore",
+    "image" : "placeholder.jpg",
+    "message" : "The sponsor replies: ",
+    "choices" : null,
+    "chances" : [
+	{
+	    "threshold" : 5,
+	    "text" : "Okay, we'll give you the full amount.",
+	    "effects" : [
+		{ "sponsors" : 1 },
+		{ "rating" : 10 },
+		{ "multiplier", 0.05 },
+		{ "money" : 4000 },
+		{ "time" : 2 }
+	    ]
+	},
+	{
+	    "threshold" : 10,
+	    "text" : "Let's meet half way.",
+	    "effects" : [
+		{ "sponsors" : 1 },
+		{ "rating" : 10 },
+		{ "multiplier", 0.05 },
+		{ "money" : 3000 },
+		{ "time" : 2 }
+	    ]
+	},
+	{
+	    "threshold" : 100,
+	    "text" : "No.",
+	    "effects" : [
+		{ "rating" : -20 },
+		{ "time" : 2 }
+	    ]
+	}
+    ]
+},
+{
+    "type" : "SponsorJob",
+    "image" : "placeholder.jpg",
+    "message" : "Seriously?",
+    "choices" : [
+	{
+	    "text" : "Yeah",
+	    "effects" : [
+		{ "url" : "www.google.com" }
+	    ],
+	    "next" : null
+	},
+	{
+	    "text" : "Guess not...",
+	    "effects" : null,
+	    "next" : null
+	}
+    ],
+    "chances" : null
+}]
