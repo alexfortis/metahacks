@@ -240,8 +240,11 @@
     ]
 },
 {
+    "name" : "Emergency "
+},
+{
 	"name":"Emergency bathroom clogged",
-	"images": "bathroom.jpg",
+	"images": "bathroom.png",
 	"choices": [
 		   {
 			"text":"Use a plunger.",
