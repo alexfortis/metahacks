@@ -238,6 +238,35 @@
 	    }
 	}
     ]
+},
+{
+	"name":"Emergency bathroom clogged",
+	"images": "bathroom.jpg",
+	"choices": [
+		   {
+			"text":"Use a plunger.",
+		   	"effects":
+		   	{
+				"rating":5,
+				"time": 1
+		   	}
+		   },
+		   {
+			"text":"Hire a plumber",
+			"effects": {
+				   "rating":2,
+				   "time":3
+			}
+		   },
+		   {
+			"text":"Ignore",
+			"effects": {
+				   "rating":-5,
+				   "time":24
+			}
+		   }
+		   
+	]
 }
 
 ]
