@@ -34,34 +34,38 @@ block content
         .ui.segment
           p.event= state.event_item.message
       .column
-    .stretched.row
+    .stretched.row.choices
       .column
       if state.event_item.choices.length > 3
         .four.wide.column
           a.ui.huge.yellow.button.spaced-top.choice(
             data-next=JSON.stringify(state.event_item.choices[0].next),
-            data-effects=JSON.stringify(state.event_item.choices[0].effects)
+            data-effects=JSON.stringify(state.event_item.choices[0].effects),
+            data-chances=JSON.stringify(state.event_item.chances)
           )= state.event_item.choices[0].text
           a.ui.huge.yellow.button.spaced-top.choice(
             data-next=JSON.stringify(state.event_item.choices[1].next),
-            data-effects=JSON.stringify(state.event_item.choices[1].effects)
+            data-effects=JSON.stringify(state.event_item.choices[1].effects),
+            data-chances=JSON.stringify(state.event_item.chances)
           )= state.event_item.choices[1].text
         .four.wide.column
           a.ui.huge.yellow.button.spaced-top.choice(
             data-next=JSON.stringify(state.event_item.choices[2].next),
-            data-effects=JSON.stringify(state.event_item.choices[2].effects)
+            data-effects=JSON.stringify(state.event_item.choices[2].effects),
+            data-chances=JSON.stringify(state.event_item.chances)
           )= state.event_item.choices[2].text
           a.ui.huge.yellow.button.spaced-top.choice(
             data-next=JSON.stringify(state.event_item.choices[3].next),
-            data-effects=JSON.stringify(state.event_item.choices[3].effects)
+            data-effects=JSON.stringify(state.event_item.choices[3].effects),
+            data-chances=JSON.stringify(state.event_item.chances)
           )= state.event_item.choices[3].text
       else
         .eight.wide.column
           for choice in state.event_item.choices
             a.ui.huge.yellow.button.spaced-top.choice(
-
               data-next=JSON.stringify(choice.next),
-              data-effects=JSON.stringify(choice.effects)
+              data-effects=JSON.stringify(choice.effects),
+              data-chances=JSON.stringify(choice.chances)
             )= choice.text
       .column
 

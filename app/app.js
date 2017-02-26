@@ -40,7 +40,7 @@ var EventChanceSchema = new Schema({
     choices: [{
         text: String,
         next: String,
-        effects: [Schema.Types.Mixed]
+        effects: Object
     }],
     chances: [Schema.Types.Mixed],
     image: String
@@ -79,7 +79,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
 
 // Routes
-require('../routes/general')(app, Event);
+require('../routes/general')(app, Event, Chance);
 
 // Port configuration
 const port = 3000;
