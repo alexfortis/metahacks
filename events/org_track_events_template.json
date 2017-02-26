@@ -1,0 +1,53 @@
+{
+    "name" : "",
+    "image" : "placeholder.jpg",
+    "message" : "",
+    "choices" : [
+	{
+	    "text" : "",
+	    "effects" :{
+		    
+	    },
+	    "next" : ""
+	},
+	{
+	    "text" : "",
+	    "effects" :{
+		    
+	    },
+	    "next" : ""
+	},
+	{
+	    "text" : "",
+	    "effects" :{
+		    
+	    },
+	    "next" : ""
+	},
+	{
+	    "text" : "",
+	    "effects" :{
+		    
+	    },
+	    "next" : ""
+	},
+    ],
+    "chances" : [
+	{
+	    "threshold" : 100,
+	    "text" : "",
+	    "effects" : {
+		"" : "",
+		"" : "" 
+	    }
+	},
+	{
+	    "threshold" : 100,
+	    "text" : "",
+	    "effects" : {
+		"" : "",
+		"" : "" 
+	    }
+	},
+    ]
+},
