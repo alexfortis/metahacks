@@ -107,7 +107,7 @@
 		"rating":10,
 		"time":1,
 		"breakfast":"IHOP",
-		"money":10
+		"money":-10
 	    },
 	    "next":null
 	},
@@ -117,7 +117,7 @@
 		"rating":8,
 		"time":1,
 		"breakfast":"Nezuntoz",
-		"money":5
+		"money":-5
 	    },
 	    "next":null
 	},
@@ -127,7 +127,7 @@
 		"rating":2,
 		"time":1,
 		"breakfast":"Sodexo",
-		"money":3
+		"money":-3
 	    },
 	    "next":null
 	},
@@ -137,7 +137,7 @@
 		"rating":7,
 		"time":1,
 		"breakfast":"Denny's",
-		"money":5
+		"money":-5
 	    }
 	}
     ],
@@ -155,7 +155,7 @@
 		"rating":7,
 		"time":1,
 		"lunch":"Subway",
-		"money":5
+		"money":-5
 	    },
 	    "next":null
 	},
@@ -165,7 +165,7 @@
 		"rating":10,
 		"time":1,
 		"lunch":"Wegman's",
-		"money":8
+		"money":-8
 	    },
 	    "next":null
 	},
@@ -175,7 +175,7 @@
 		"rating":6,
 		"time":1,
 		"lunch":"Chick N Bap",
-		"money":6
+		"money":-6
 	    },
 	    "next":null
 	},
@@ -185,7 +185,7 @@
 		"rating":5,
 		"time":1,
 		"lunch":"Nirchi's",
-		"money":3
+		"money":-3
 	    },
 	    "next":null
 	}
@@ -204,7 +204,7 @@
 		"rating":5,
 		"time":1,
 		"dinner":"Buffet Star",
-		"money":8
+		"money":-8
 	    },
 	    "next":null
 	},
@@ -214,7 +214,7 @@
 		"rating":6,
 		"time":1,
 		"dinner":"Moe's",
-		"money":8
+		"money":-8
 	    },
 	    "next":null
 	},
@@ -224,7 +224,7 @@
 		"rating":7,
 		"time":1,
 		"dinner":"Tully's",
-		"money":8
+		"money":-8
 	    },
 	    "next":null
 	},
@@ -234,7 +234,7 @@
 		"rating": 3,
 		"time":1,
 		"dinner":"Sodexo",
-		"money":5
+		"money":-5
 	    }
 	}
     ]
@@ -256,6 +256,7 @@
 			"effects": {
 				   "rating":2,
 				   "time":3
+				   "money":300
 			}
 		   },
 		   {
@@ -266,7 +267,46 @@
 			}
 		   }
 		   
-	]
+	],
+	"chances":null
+},
+{
+	"name":"Emergency power out",
+	"images":"power.jpg",
+	"choices":[
+		{
+			"text":"Ignore",
+			"effects": {
+				   "rating":-100,
+				   "time":24
+			}
+		},
+		{
+			"text":"Acquire Jasper's services",
+			"effects": {
+				   "rating":100,
+				   "time":0
+				   "money":-10000
+			}
+		},
+		{
+			"text":"Call Con Edison",
+			"effects":{
+				"rating":10,
+				"time":2,
+				"money":-100
+			}
+		},
+		{
+			"text":"Manually generate power yourself",
+			"effects": {
+				   "rating":1,
+				   "time":24,
+				   "money":0
+			}
+		}
+	],
+	"chances":null
 }
 
 ]
