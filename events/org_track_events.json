@@ -272,7 +272,7 @@
 },
 {
 	"name":"Emergency power out",
-	"images":"power.jpg",
+	"image":"power.jpg",
 	"choices":[
 		{
 			"text":"Ignore",
@@ -307,6 +307,40 @@
 		}
 	],
 	"chances":null
+},
+{
+	"name":"Ceremony closing",
+	"image":"hackbu.jpg"
+	"choices": [
+		   {
+			"text":"Donald Trump Terminal Simulator",
+			"effects":{
+				"rating": 5,
+				"time": 24
+			}
+		   },
+		   {
+			"text":"Hackathon Simulator",
+			"effects": {
+				   "rating":150,
+				   "time": 24
+			}
+		   },
+		   {
+			"text":"Protect Yourself",
+			"effects": {
+				   "rating":130,
+				   "time":24
+			}
+		   },
+		   {
+			"text":"Waiting In Line For Food at the Hackathon",
+			"effects": {
+				   "rating":110,
+				   "time":24
+			}
+		   }
+	]
 }
 
 ]
