@@ -1,61 +1,53 @@
 {
-    "type" : "",
+    "name" : "",
     "image" : "placeholder.jpg",
     "message" : "",
     "choices" : [
 	{
 	    "text" : "",
-	    "effects" : [
-		{
+	    "effects" :{
 		    
-		}
-	    ],
+	    },
 	    "next" : ""
 	},
 	{
 	    "text" : "",
-	    "effects" : [
-		{
+	    "effects" :{
 		    
-		}
-	    ],
+	    },
 	    "next" : ""
 	},
 	{
 	    "text" : "",
-	    "effects" : [
-		{
+	    "effects" :{
 		    
-		}
-	    ],
+	    },
 	    "next" : ""
 	},
 	{
 	    "text" : "",
-	    "effects" : [
-		{
+	    "effects" :{
 		    
-		}
-	    ],
+	    },
 	    "next" : ""
-	}
+	},
     ],
     "chances" : [
 	{
 	    "threshold" : 100,
 	    "text" : "",
-	    "effects" : [
-		{ "" : "" },
-		{ "" : "" },
-	    ]
+	    "effects" : {
+		"" : "",
+		"" : "" 
+	    }
 	},
 	{
 	    "threshold" : 100,
 	    "text" : "",
-	    "effects" : [
-		{ "" : "" },
-		{ "" : "" },
-	    ]
+	    "effects" : {
+		"" : "",
+		"" : "" 
+	    }
 	},
     ]
 },
