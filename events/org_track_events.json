@@ -312,6 +312,114 @@
 	"chances":null
 },
 {
+	"name":"Emergency interrupt",
+	"image": "interrupt.png",
+	"message":"Oh, no! Someone has crashed one of your scheduled talks and is advertising a company that didn't even sponsor your hackathon!"
+	"choices": [
+		   {
+			"text":"Ignore him. Eventually he'll talk so much people will find out how dumb he is.",
+			"effects": {
+				   "rating":-3,
+				   "time":2
+			},
+			"next": null
+		   },
+		   {
+			"text":"Call security to escort him out.",
+			"effects": {
+				   "rating":3,
+				   "time":1
+			},
+			"next":null
+		   },
+		   {
+			"text":"Push him out yourself with your amazing brute strength.",
+			"effects": {
+				   "rating":2,
+				   "time":1
+			},
+			"next": null
+		   }
+	],
+	"chances": null
+},
+{
+	"name":"Emergency internet",
+	"image":"internet.jpg",
+	"message":"The Wi-Fi and wired internet are both down! What do you do?",
+	"choices": [
+		   {
+			"text":"Ignore it. Who needs StackOverflow anyway?",
+			"effects": {
+				   "rating":-20,
+				   "time":7
+			},
+			"next": null
+		   },
+		   {
+			"text":"Call/complain to your ISP.",
+			"effects": {
+				   "rating":-5,
+				   "time":3
+			},
+			"next": null
+		   },
+		   {
+			"text":"Offer your phone as a wireless hotspot.",
+			"effects": {
+				   "rating": 2,
+				   "time": 1
+			},
+			"next": null
+		   }
+	],
+	"chances": null
+},
+{
+	"name":"Emergency food",
+	"image":"no-food.png",
+	"message":"Your dinner order didn't go through the system properly and, as it stands, your hackers will starve until breakfast. What do you do?",
+	"choices": [
+		   {
+			"text":"Ignore it. Real programmers don't need dinner!",
+			"effects": {
+				   "rating": -40,
+				   "time": 2,
+				   "money": 0
+			},
+			"next": null
+		   },
+		   {
+			"text": "Order it now. Better late than never, right?",
+			"effects": {
+				   "rating": -10,
+				   "time": 2,
+				   "money": -300
+			},
+			"next": null
+		   },
+		   {
+			"text":"Cook dinner for everyone yourself (with a few helpers, of course).",
+			"effects": {
+				   "rating": 20,
+				   "time": 4,
+				   "money": -150
+			},
+			"next": null
+		   },
+		   {
+			"text": "Acquire Jasper's services.",
+			"effects": {
+				   "rating":100,
+				   "time":0,
+				   "money":-10000
+			},
+			"next": null
+		   }
+	],
+	"chances": null
+},
+{
 	"name":"Ceremony closing",
 	"image":"hackbu.jpg"
 	"choices": [
