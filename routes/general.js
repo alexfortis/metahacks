@@ -36,6 +36,10 @@ module.exports = function(app, Event) {
     }
   });
 
+  app.post('/organize', function(req, res) {
+    console.log('test');
+  });
+
   app.get('/newgame', function(req, res) {
     req.session.destroy(function(err) {
       return res.redirect('/');

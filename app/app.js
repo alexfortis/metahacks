@@ -29,22 +29,24 @@ app.use(require('express-session')({
 }));
 
 // Event Schema
-var EventSchema = new Schema({
+var EventChanceSchema = new Schema({
     message: String,
-    type: String,
+    start: Boolean,
+    name: {
+        type: String,
+        unique: true,
+        sparse: true
+    },
     choices: [{
         text: String,
-        chances: [Schema.Types.Mixed],
-        next: {
-            type: String,
-            unique: true,
-            sparse: true
-        }
+        next: String,
+        effects: [Schema.Types.Mixed]
     }],
+    chances: [Schema.Types.Mixed],
     image: String
 });
 
-EventSchema.statics.random = function(callback) {
+EventChanceSchema.statics.random = function(callback) {
   this.count(function(err, count) {
     if (err) {
       return callback(err);
@@ -54,7 +56,8 @@ EventSchema.statics.random = function(callback) {
   }.bind(this));
 };
 
-var Event = mongoose.model('Event', EventSchema, 'events');
+var Event = mongoose.model('Event', EventChanceSchema, 'events');
+var Chance = mongoose.model('Chance', EventChanceSchema, 'chances');
 
 // Path configuration
 const dir = path.resolve(__dirname, '..');
