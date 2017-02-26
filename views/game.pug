@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  .ui.equal.width.padded.grid
+    .stretched.row
+      .column
+      .twelve.wide.column.spaced-top.center.aligned
+        .ui.piled.segment
+          h2.ui.header.inline
+            i.big.thumbs.outline.up.white.icon
+            .content= state.stats.rating
+          h2.ui.header.inline
+            i.big.building.outline.white.icon
+            .content= state.stats.sponsors
+          h2.ui.header.inline
+            i.big.dollar.up.white.icon
+            .content= state.stats.money
+          h2.ui.header.inline
+            i.big.user.outline.white.icon
+            .content= state.stats.hackers
+          h2.ui.header.inline
+            i.big.clock.outline.white.icon
+            .content= 'Hour ' + state.stats.time
+      .column
+    .stretched.row
+      .column
+      .three.wide.column
+        .ui.segment
+          img.ui.image(src= 'assets/img/' + state.event_item.image)
+      .column
+    .stretched.row
+      .column
+      .eight.wide.column
+        .ui.segment
+          p.event= state.event_item.message
+      .column
+    .stretched.row
+      .column
+      if state.event_item.choices.length > 3
+        .four.wide.column
+          a.ui.huge.yellow.button.spaced-top(data-choice=state.event_item.choices[0].text)= state.event_item.choices[0].text
+          a.ui.huge.yellow.button.spaced-top(data-choice=state.event_item.choices[1].text)= state.event_item.choices[1].text
+        .four.wide.column
+          a.ui.huge.yellow.button.spaced-top(data-choice=state.event_item.choices[2].text)= state.event_item.choices[2].text
+          a.ui.huge.yellow.button.spaced-top(data-choice=state.event_item.choices[3].text)= state.event_item.choices[3].text
+      else
+        .eight.wide.column
+          for choice in state.event_item.choices
+            a.ui.huge.yellow.button.spaced-top(data-choice=choice.text)= choice.text
+      .column

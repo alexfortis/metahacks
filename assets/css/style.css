@@ -1,0 +1,50 @@
+body {
+    background-color: #1F6F9B;
+}
+
+.vertical-center {
+    padding-top: 120px;
+}
+
+.ui.button.spaced-right {
+    margin-right: 30px;
+}
+
+h2.ui.header.inline {
+    display: inline;
+    margin-right: 20px;
+}
+
+p.event {
+    font-size: 16px;
+}
+
+.spaced-top {
+    margin-top: 20px!important;
+}
+
+.padding_left {
+    padding-left: 20px!important;
+}
+
+.padding_right {
+    padding-right: 20px!important;
+}
+
+.splash.icon {
+    font-size: 5em!important;
+}
+
+.splash.content {
+    margin-top: 20px;
+    font-size: 2.3em;
+}
+
+.splash.sub.header {
+    padding-top: 30px!important;
+    font-size: 1.2em!important;
+}
+
+.ui[class*="vertically divided"].grid > .row:before {
+    box-shadow: 0px 3px 0px 2px rgba(255, 255, 255,0.30);
+}
