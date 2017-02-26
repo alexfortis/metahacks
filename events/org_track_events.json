@@ -1,5 +1,5 @@
 [{
-    "type" : "Sponsor",
+    "name" : "Sponsor",
     "image" : "placeholder.jpg",
     "message" : "A sponsor approaches.",
     "choices" : [
@@ -37,7 +37,7 @@
 },
 
 {
-    "type" : "SponsorMore",
+    "name" : "SponsorMore",
     "image" : "placeholder.jpg",
     "message" : "The sponsor replies: ",
     "choices" : null,
@@ -76,7 +76,7 @@
 },
 
 {
-    "type" : "SponsorJob",
+    "name" : "SponsorJob",
     "image" : "placeholder.jpg",
     "message" : "Seriously?",
     "choices" : [
@@ -97,7 +97,7 @@
 },
 
 {
-    "type":"Food breakfast",
+    "name":"Food breakfast",
     "image":"food.jpg",
     "message":"What will your hackers eat for breakfast?",
     "choices": [
@@ -145,7 +145,7 @@
 },
 
 {
-    "type":"Food lunch",
+    "name":"Food lunch",
     "image":"food.jpg",
     "message":"What will your hackers eat for lunch?",
     "choices":[
@@ -194,7 +194,7 @@
 },
  
 {
-    "type":"Food dinner",
+    "name":"Food dinner",
     "image":"food.jpg",
     "message":"What will your hackers eat for dinner?",
     "choices":[
